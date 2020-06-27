@@ -3,9 +3,9 @@ import React, { Component } from "react";
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
-
 import Login from "./login.component";
 import SignUp from "./signup.component";
+import CreatePost from "./createpost.component";
 
 export default class LandingPage extends Component {
   render() {
@@ -33,58 +33,21 @@ export default class LandingPage extends Component {
           </div>
         </nav>
         <div class="">
-				<header className="masthead text-white text-center">
-					<div className="overlay" />
-					<div className="container" style={{padding: '100px'}}>
-						<div className="row">
-							<div className="col-xl-9 mx-auto">
-								<h1 className="mb-5">Welcome to ABC</h1>
-							</div>
-						</div>
-					</div>
-				</header>
-
-				<table>
-					<tbody><tr>
-							<th>Name</th>
-							<th>Email</th>
-							<th>MSSV</th>
-						</tr>
-						<tr>
-							<td>Alfreds Futterkiste</td>
-							<td>Maria Anders</td>
-							<td>Germany</td>
-						</tr>
-						<tr>
-							<td>Centro comercial Moctezuma</td>
-							<td>Francisco Chang</td>
-							<td>Mexico</td>
-						</tr>
-						<tr>
-							<td>Ernst Handel</td>
-							<td>Roland Mendel</td>
-							<td>Austria</td>
-						</tr>
-						<tr>
-							<td>Island Trading</td>
-							<td>Helen Bennett</td>
-							<td>UK</td>
-						</tr>
-						<tr>
-							<td>Laughing Bacchus Winecellars</td>
-							<td>Yoshi Tannamuri</td>
-							<td>Canada</td>
-						</tr>
-						<tr>
-							<td>Magazzini Alimentari Riuniti</td>
-							<td>Giovanni Rovelli</td>
-							<td>Italy</td>
-						</tr>
-					</tbody></table>
-
-
-
-
+          <header className="masthead text-white text-center">
+            <div className="overlay" />
+            <div className="container" style={{ padding: "100px" }}>
+              <div className="row">
+                <div className="col-xl-9 mx-auto">
+                  <div className="title">
+										Welcom to ABC
+									</div>
+									<div>
+										<img src = "../../asset/landing.jpg" />
+									</div>
+                </div>
+              </div>
+            </div>
+          </header>
         </div>
       </div>
     );
