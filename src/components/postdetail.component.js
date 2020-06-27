@@ -2,39 +2,43 @@ import React, { Component } from "react";
 // import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-
+import axios from "axios";
 
 import Login from "./login.component";
 import SignUp from "./signup.component";
 
 export default class PostDetail extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+          data:{},
+          noteContent: '',
+          id:''
+        }
+      }
+    componentDidMount(){
+        axios(
+            {
+                headers: {'Authorization':'Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMSIsImlhdCI6MTU5MzI0MDE0NCwiZXhwIjoxNTkzODQ0OTQ0fQ.V7Zr7iP8zQhV6Go3c_Ynmlv-NPzBP16BY5N0gRxSQ0xOHz5xxJyWoZVj6M4kFNK_x90rS_VvKmbH8r3F9X3-qQ'},
+                method: 'GET',
+                url: 'http://10.128.170.6:8080/api/posts/2',
+            }
+        ).then(res => {
+            let {data} = res;
+            this.setState({data : data}); 
+            console.log(this.state.data);
+          });
+          
+    }
+    
   render() {
     return (
-      <div>
-        <nav className="navbar navbar-expand-lg navbar-light fixed-top">
-          <div className="container">
-            <Link className="navbar-brand" to={"/sign-in"}>
-              ABC
-            </Link>
-            <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
-              <ul className="navbar-nav ml-auto">
-                <li className="nav-item">
-                  <Link className="nav-link" to={"/sign-in"}>
-                    Login
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to={"/sign-up"}>
-                    Sign up
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-        <div class="show-detail" style={{padding: '100px 0px 0 200px'}} >
+      <div className="row">
+        
+        <div class="show-detail" id="id1" >
                 <div className="Header-post">
-                    <h2>Phòng tiện nghi có gác, dt 30m, giá 3.6tr, ngay đầm sen</h2>
+                {/* <h2>{this.state.homes}</h2> */}
+                <h2>{this.state.data.title}</h2>
                     <h3>Thông tin chung</h3>
                 </div>
 
@@ -52,7 +56,27 @@ export default class PostDetail extends Component {
                     <td>035124238</td>
                 </tr>
             </table>
-            
+            <div id="carouselExampleControls" className="carousel slide mt-3" data-ride="carousel">
+              <div className="carousel-inner">
+                <div className="carousel-item active">
+                  <img src="https://static123.com/phongtro123/uploads/images/thumbs/900x600/fit/2020/05/27/img-20200519-003648_1590552309.jpg" className="d-block w-100" alt="..." />
+                </div>
+                <div className="carousel-item">
+                  <img src="https://static123.com/phongtro123/uploads/images/thumbs/900x600/fit/2020/05/27/img-20200519-003732_1590552312.jpg" className="d-block w-100" alt="..." />
+                </div>
+                <div className="carousel-item">
+                  <img src="https://static123.com/phongtro123/uploads/images/thumbs/900x600/fit/2020/05/27/img-20200519-003727_1590552326.jpg" className="d-block w-100" alt="..." />
+                </div>
+              </div>
+              <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span className="carousel-control-prev-icon" aria-hidden="true" />
+                <span className="sr-only">Previous</span>
+              </a>
+              <a className="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span className="carousel-control-next-icon" aria-hidden="true" />
+                <span className="sr-only">Next</span>
+              </a>
+            </div>
             <div className="decription" style={{margin: '0 20px 0 20px'}}>
                 <h3 style={{margin: '15px 0px 0px 0px'}}>Thông tin mô tả</h3>
                 <p>Cho thuê Phòng trọ tiện nghi có mới xây có GÁC trung tâm quận Tân Phú, giáp Quận 11, Q.10, Q.6, Tân Bình</p>
@@ -118,10 +142,11 @@ export default class PostDetail extends Component {
                     ---------------------------------------------</p>
                 <p>
                 ☎️ Điện thoại liên hệ: 0902817961</p>
-                    
-                    <img src="https://static123.com/phongtro123/uploads/images/thumbs/900x600/fit/2020/05/27/img-20200519-003648_1590552309.jpg" />
-                    <img src="https://static123.com/phongtro123/uploads/images/thumbs/900x600/fit/2020/05/27/img-20200519-003732_1590552312.jpg" />
-                    <img src="https://static123.com/phongtro123/uploads/images/thumbs/900x600/fit/2020/05/27/img-20200519-003727_1590552326.jpg" />
+                
+
+                    {/* <img className='w-100' src="https://static123.com/phongtro123/uploads/images/thumbs/900x600/fit/2020/05/27/img-20200519-003648_1590552309.jpg" />
+                    <img className='w-100' src="https://static123.com/phongtro123/uploads/images/thumbs/900x600/fit/2020/05/27/img-20200519-003732_1590552312.jpg" />
+                    <img className='w-100' src="https://static123.com/phongtro123/uploads/images/thumbs/900x600/fit/2020/05/27/img-20200519-003727_1590552326.jpg" /> */}
             </div>
 
 
