@@ -10,11 +10,10 @@ export default class Listitem extends Component {
             {elements.map((value, index) => {
               return (
                 <Item>
-
                 </Item>
               )
             })}
-            
+
           </div>
         );
     }

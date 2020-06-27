@@ -32,19 +32,20 @@ function App() {
           </div>
         </div>
       </nav>
-      <div className="list-item-wrapper">
+      <div className="list-item-wrapper container">
         <Route path="/listitem" component={Listitem} />
+        <Route path="/show-detail" component={PostDetail} />
       </div>
-      <div className="auth-wrapper">
-        <div className="auth-inner">
+      {/* <div className="auth-wrapper"> */}
+        {/* <div className="auth-inner"> */}
           <Switch>
             <Route exact path='/' component={Login} />
             <Route path="/sign-in" component={Login} />
             <Route path="/sign-up" component={SignUp} />
-            <Route path="/show-detail" component={PostDetail} />
+            
           </Switch>
-        </div>
-      </div>
+        {/* </div> */}
+      {/* </div> */}
     </div></Router>
   );
 }
