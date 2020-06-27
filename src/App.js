@@ -5,8 +5,9 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import Login from "./components/login.component";
 import SignUp from "./components/signup.component";
-import LadingPage from "./components/ladingpage.component";
+// import LadingPage from "./components/ladingpage.component";
 import LandingPage from "./components/ladingpage.component";
+import PostDetail from "./components/postdetail.component";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Route path = "/" exact component = {LandingPage} />
       <Route path="/sign-in" component={Login} />
       <Route path="/sign-up" component={SignUp} />
+      <Route path="/show-detail" component={PostDetail} />
     </Router>
   );
 }
