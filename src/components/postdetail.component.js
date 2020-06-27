@@ -40,14 +40,14 @@ export default class PostDetail extends Component {
 
 				<table>
                 <tr>
-                    <th>Location</th>
+                    <th>Name</th>
                     <th>Location</th>
                     <th>Price</th>
                     <th>Phone</th>
                 </tr>
                 <tr>
                     <td>Alfreds Futterkiste</td>
-                    <td>Maria Anders</td>
+                    <td>35 Quan Thu Duc</td>
                     <td>100$</td>
                     <td>035124238</td>
                 </tr>
