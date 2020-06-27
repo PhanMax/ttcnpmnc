@@ -12,7 +12,6 @@ import PostDetail from "./components/postdetail.component";
 
 function App() {
   return (<Router>
-
     <div className="App">
       <nav className="navbar navbar-expand-lg navbar-light fixed-top">
         <div className="container">
@@ -38,7 +37,7 @@ function App() {
       <div className="auth-wrapper">
         <div className="auth-inner">
           <Switch>
-            <Route exact path='/' component={Login} />
+            <Route exact path='/' component={LandingPage} />
             <Route path="/sign-in" component={Login} />
             <Route path="/sign-up" component={SignUp} />
             <Route path="/show-detail" component={PostDetail} />

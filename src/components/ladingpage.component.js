@@ -7,6 +7,7 @@ import Login from "./login.component";
 import SignUp from "./signup.component";
 import CreatePost from "./createpost.component";
 
+
 export default class LandingPage extends Component {
   render() {
     return (
@@ -17,18 +18,7 @@ export default class LandingPage extends Component {
               ABC
             </Link>
             <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
-              <ul className="navbar-nav ml-auto">
-                <li className="nav-item">
-                  <Link className="nav-link" to={"/sign-in"}>
-                    Login
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to={"/sign-up"}>
-                    Sign up
-                  </Link>
-                </li>
-              </ul>
+              
             </div>
           </div>
         </nav>
@@ -38,7 +28,7 @@ export default class LandingPage extends Component {
             <div className="container" style={{ padding: "100px" }}>
               <div className="row">
                 <div className="col-xl-9 mx-auto">
-                  <div className="title">
+                  <div style = {{color: "red"}} className="title">
 										Welcom to ABC
 									</div>
 									<div>
