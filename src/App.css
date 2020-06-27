@@ -20,6 +20,9 @@
 .App-link {
   color: #09d3ac;
 }
+.show-detail {
+  margin: 50px;
+}
 .list-item-wrapper{
   margin-top: 150px;
 }
