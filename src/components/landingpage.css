@@ -1,0 +1,18 @@
+.container_div{
+    min-height: 100vh;
+    position: relative;
+    background-image: url(../asset/background_others.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container_div::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(51, 48, 48, 0.5);
+    opacity: 1 !important;
+}

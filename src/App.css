@@ -1,3 +1,4 @@
+
 .App {
   text-align: center;
 }
@@ -19,10 +20,18 @@
 
 .App-link {
   color: #09d3ac;
+  /* background-image: url("./asset/background.jpg"); */
 }
-.show-detail {
+/* .show-detail {
   margin: 50px;
-}
+/* } */
 .list-item-wrapper{
   margin-top: 150px;
+}
+
+.image{
+  width: 200px;
+  height: 200px;
+  /* background-image: url("./asset/landing.jpg"); */
+  
 }

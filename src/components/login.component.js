@@ -3,8 +3,8 @@ import { Redirect, Route, Router } from "react-router-dom";
 import "../App.css";
 import axios from "axios";
 import LandingPage from "./ladingpage.component";
+//const URL = "http://10.128.170.6:8080/api/auth/login";
 const URL = "http://10.128.170.6:8080/api/auth/login";
-
 export default class Login extends Component {
   constructor(props) {
     super(props);
@@ -49,7 +49,7 @@ export default class Login extends Component {
 
   render() {
     if (this.state.redirect.length != 0) {
-      return <Redirect to="/" Component= {LandingPage}/>;
+      return <Redirect to={`/listitem`}/>;
     } else {
       return (
         <div className="auth-wrapper">
